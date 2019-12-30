@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Restobar El Tori</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top">
+        <header class="hero">
+          <h1>Restobar El Tori</h1>
+          <p>Los mejores lomitos de Cordoba!</p>
+        </header>
+        <div class="cta cta1">
+          <p class="price">$250</p>
+          <p>Lomito completo</p>
+        </div>
+        <div class="cta cta2">
+          <p class="price">$350</p>
+          <p>Pizza</p>
+        </div>
+      </div>
+      <nav class="menu">
+        <button aria-expanded="false" aria-controls="menu-list">
+          <span class="open">☰</span>
+          <span class="close">×</span>
+          Menu
+        </button>
+        <ul id="menu-list">
+          <li>
+            <a href="">Lomos</a>
+          </li>
+          <li>
+            <a href="">Cervezas</a>
+          </li>
+          <li>
+            <a href="">Pizzas</a>
+          </li>
+          <li>
+            <a href="">Postres</a>
+          </li>
+          <li>
+            <a href="">Reservaciones</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="features">
+        <div class="feature">
+          <span class="icon">🥪</span>
+          <h3>Lomos</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+            assumenda.
+          </p>
+        </div>
+        <div class="feature">
+          <span class="icon">🍺</span>
+          <h3>Cervezas</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+            assumenda.
+          </p>
+        </div>
+        <div class="feature">
+          <span class="icon">🍕</span>
+          <h3>Pizzas</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+            assumenda.
+          </p>
+        </div>
+        <div class="feature">
+          <span class="icon">🎵</span>
+          <h3>Musica</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+            assumenda.
+          </p>
+        </div>
+      </section>
+
+      <section class="about">
+        <img
+          src="img/lomo-2.jpg"
+          alt="Rico lomito"
+          class="about__mockup"
+        />
+        <div class="about__details">
+          <h2>Lomo gran Tori</h2>
+          <p>Esto es lo que estuviste esperando</p>
+          <button>Mas →</button>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <h2>Instant Grams</h2>
+        <img src="./img/generic-1.jpg" alt="Generic Gram">
+        <img src="./img/generic-2.jpg" alt="Generic Gram">
+        <img src="./img/generic-3.jpg" alt="Generic Gram">
+        <img src="./img/generic-4.jpg" alt="Generic Gram">
+        <img src="./img/generic-5.jpg" alt="Generic Gram">
+        <img src="./img/generic-6.jpg" alt="Generic Gram">
+        <img src="./img/generic-7.jpg" alt="Generic Gram">
+      </section>
+    </div>
+
+    <script>
+      const menuButton = document.querySelector('button[aria-expanded]')
+
+      function toggleNav({ target }) {
+        const expanded = target.getAttribute('aria-expanded') === 'true' || false
+        menuButton.setAttribute('aria-expanded', !expanded)
+      }
+
+      menuButton.addEventListener('click', toggleNav)
+    </script>
+  </body>
+</html>
